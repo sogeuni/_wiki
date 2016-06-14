@@ -1,3 +1,5 @@
 Aaaa
 
+<<AllPages()>>
+
 <<GlobalTOC()>>
