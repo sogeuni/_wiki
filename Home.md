@@ -1,6 +1,6 @@
 Aaaa
 
-<<Series()>>
+<<Series(test)>>
 
 <<AllPages()>>
 
