@@ -29,26 +29,27 @@ $ sudo apt-get install libsdl2-2.0-0 libsdl2-ttf-2.0-0 libportaudio2 libpng12-0
   ```
   $ adb forward tcp:5277 tcp:5277
   ```
-7. <p>```<sdk>/extras/google/auto/``` 디렉토리의 ```desktop-head-unit.exe``` (윈도우)나 ```./desktop-head-unit``` (맥 또는 리눅스) 명령어를 실행하여 DHU를 시작합니다.
-```shell
-$ cd <sdk>/extras/google/auto&#10;
-$ ./desktop-head-unit
-```
-기본적으로 헤드유닛 서버는 5277번 포트로 연결됩니다. SSH를 사용하는 등, host나 port를 변경해야 한다면 다음의 예제처럼 ```desktop-head-unit --adb <[localhost:]port>``` flag를 사용하여 변경이 가능합니다.
-```shell
-$ ./desktop-head-unit --adb 5999
-```
-기본으로 실행되는 DHU는 가장 일반적인 형태의 터치스크린 입력을 가지는 헤드유닛을 에뮬레이팅하며, 터치스크린 입력은 마우스 클릭으로 시뮬레이트합니다. 만약 컨트롤러를 가지는 DHU를 실행시키려면 ```-i controller``` flag를 사용합니다.
-```shell
-$ ./desktop-head-unit -i controller
-```
-단, 이경우 터치스크린 입력은 되지 않으며 컨트롤러는 키보드 단축키로 맵핑됩니다. 컨트롤러키와 그에 할당된 키보드 단축키는 [https://developer.android.com/training/auto/testing/index.html#cmd-bindings 여기]를 참고하세요.
+7. ```<sdk>/extras/google/auto/``` 디렉토리의 ```desktop-head-unit.exe``` (윈도우)나 ```./desktop-head-unit``` (맥 또는 리눅스) 명령어를 실행하여 DHU를 시작합니다.
+  
+  ```shell
+  $ cd <sdk>/extras/google/auto&#10;
+  $ ./desktop-head-unit
+  ```
+  기본적으로 헤드유닛 서버는 5277번 포트로 연결됩니다. SSH를 사용하는 등, host나 port를 변경해야 한다면 다음의 예제처럼 ```desktop-head-unit --adb <[localhost:]port>``` flag를 사용하여 변경이 가능합니다.
+  ```shell
+  $ ./desktop-head-unit --adb 5999
+  ```
+  기본으로 실행되는 DHU는 가장 일반적인 형태의 터치스크린 입력을 가지는 헤드유닛을 에뮬레이팅하며, 터치스크린 입력은 마우스 클릭으로 시뮬레이트합니다. 만약 컨트롤러를 가지는 DHU를 실행시키려면 ```-i controller``` flag를 사용합니다.
+  ```shell
+  $ ./desktop-head-unit -i controller
+  ```
+  단, 이경우 터치스크린 입력은 되지 않으며 컨트롤러는 키보드 단축키로 맵핑됩니다. 컨트롤러키와 그에 할당된 키보드 단축키는 [여기](https://developer.android.com/training/auto/testing/index.html#cmd-bindings)를 참고하세요.
 
 DHU가 실행되면 커맨드라인이나 키보드 단축키를 이용하여 앱을 테스트할 수 있습니다.
 
 ## DHU 명령어 입력하기
 
-안드로이드 오토의 기능을 이용하여 앱을 테스트 하기위애 DHU는 몇가지 명령을 가집니다. 자세한 명령옵션은 [https://developer.android.com/training/auto/testing/index.html#cmd-bindings 여기]를 참고하시기 바랍니다.
+안드로이드 오토의 기능을 이용하여 앱을 테스트 하기위애 DHU는 몇가지 명령을 가집니다. 자세한 명령옵션은 [여기](https://developer.android.com/training/auto/testing/index.html#cmd-bindings)를 참고하시기 바랍니다.
 
 ### Day mode와 night 모드 전환
 
@@ -64,4 +65,9 @@ $ mic play <sound_file_path>/<sound_file>.wav
 
 ```<sdk>/extras/google/auto/voice/``` 디렉토리에 일반적인 명령어 음성파일이 몇개 있습니다.
 
-<references />
+Here's an inline link to [Google](http://www.google.com/).
+Here's a reference-style link to [Google][1].
+Here's a very readable link to [Yahoo!][yahoo].
+
+  [1]: http://www.google.com/
+  [yahoo]: http://www.yahoo.com/
