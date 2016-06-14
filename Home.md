@@ -2,6 +2,6 @@ Aaaa
 
 <<Series(Home)>>
 
-<<AllPages(a)>>
+<<AllPages()>>
 
-<<GlobalTOC("오픈 그래프 프로토콜")>>
+<<GlobalTOC(a)>>
