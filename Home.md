@@ -1,5 +1,7 @@
 Aaaa
 
+<<Navigation()>>
+
 <<AllPages()>>
 
 <<GlobalTOC()>>
