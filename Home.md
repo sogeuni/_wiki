@@ -1,6 +1,6 @@
 Aaaa
 
-<<Navigation()>>
+<<Series()>>
 
 <<AllPages()>>
 
