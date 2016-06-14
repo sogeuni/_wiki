@@ -24,15 +24,24 @@ $ sudo apt-get install libsdl2-2.0-0 libsdl2-ttf-2.0-0 libportaudio2 libpng12-0
 3. 오토 앱의 기어 모양의 아이콘을 클릭하여 설정으로 들어간 다음 **Add new cars to Android Auto** 옵션이 활성화 되어 있는지 확인합니다. 만약 비활성화 되어 있는경우 에뮬레이터연결시에도 Auto 모드로 동작하지 않으므로 옵션을 활성화 시킵니다.
 4. 모바일 장치를 PC에 USB로 연결합니다.
 5. 모바일 장치의 화면 잠금이 해제되었는지 확인합니다. 그렇지 않으면 DHU가 실행되지 않습니다.
-6. PC와 모바일 장치를 동일한 5277 포트로 연결하기 위해 다음의 ```adb``` 명령을 실행합니다. 이 설정은 DHU가 모바일에 실행중인 헤드유닛 서버에 TCP 소켓으로 연결되도록 합니다.```shell
+6. PC와 모바일 장치를 동일한 5277 포트로 연결하기 위해 다음의 ```adb``` 명령을 실행합니다. 이 설정은 DHU가 모바일에 실행중인 헤드유닛 서버에 TCP 소켓으로 연결되도록 합니다.
+```shell
 $ adb forward tcp:5277 tcp:5277
 ```
-# <p>```<sdk>/extras/google/auto/``` 디렉토리의 ```desktop-head-unit.exe``` (윈도우)나 ```./desktop-head-unit``` (맥 또는 리눅스) 명령어를 실행하여 DHU를 시작합니다.```shell
-$ cd <sdk>/extras/google/auto&#10;$ ./desktop-head-unit```기본적으로 헤드유닛 서버는 5277번 포트로 연결됩니다. SSH를 사용하는 등, host나 port를 변경해야 한다면 다음의 예제처럼 ```desktop-head-unit --adb <[localhost:]port>``` flag를 사용하여 변경이 가능합니다.```shell
+7. <p>```<sdk>/extras/google/auto/``` 디렉토리의 ```desktop-head-unit.exe``` (윈도우)나 ```./desktop-head-unit``` (맥 또는 리눅스) 명령어를 실행하여 DHU를 시작합니다.
+```shell
+$ cd <sdk>/extras/google/auto&#10;
+$ ./desktop-head-unit
+```
+기본적으로 헤드유닛 서버는 5277번 포트로 연결됩니다. SSH를 사용하는 등, host나 port를 변경해야 한다면 다음의 예제처럼 ```desktop-head-unit --adb <[localhost:]port>``` flag를 사용하여 변경이 가능합니다.
+```shell
 $ ./desktop-head-unit --adb 5999
-``` 기본으로 실행되는 DHU는 가장 일반적인 형태의 터치스크린 입력을 가지는 헤드유닛을 에뮬레이팅하며, 터치스크린 입력은 마우스 클릭으로 시뮬레이트합니다. 만약 컨트롤러를 가지는 DHU를 실행시키려면 ```-i controller``` flag를 사용합니다.```shell
+```
+기본으로 실행되는 DHU는 가장 일반적인 형태의 터치스크린 입력을 가지는 헤드유닛을 에뮬레이팅하며, 터치스크린 입력은 마우스 클릭으로 시뮬레이트합니다. 만약 컨트롤러를 가지는 DHU를 실행시키려면 ```-i controller``` flag를 사용합니다.
+```shell
 $ ./desktop-head-unit -i controller
-```단, 이경우 터치스크린 입력은 되지 않으며 컨트롤러는 키보드 단축키로 맵핑됩니다. 컨트롤러키와 그에 할당된 키보드 단축키는 [https://developer.android.com/training/auto/testing/index.html#cmd-bindings 여기]를 참고하세요.</p>
+```
+단, 이경우 터치스크린 입력은 되지 않으며 컨트롤러는 키보드 단축키로 맵핑됩니다. 컨트롤러키와 그에 할당된 키보드 단축키는 [https://developer.android.com/training/auto/testing/index.html#cmd-bindings 여기]를 참고하세요.
 
 DHU가 실행되면 커맨드라인이나 키보드 단축키를 이용하여 앱을 테스트할 수 있습니다.
 
