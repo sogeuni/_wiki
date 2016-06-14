@@ -64,18 +64,3 @@ $ mic play <sound_file_path>/<sound_file>.wav
 ```
 
 ```<sdk>/extras/google/auto/voice/``` 디렉토리에 일반적인 명령어 음성파일이 몇개 있습니다.
-
-Here's an inline link to [Google](http://www.google.com/).
-Here's a reference-style link to [Google][1].
-Here's a very readable link to [Yahoo!][yahoo].
-
-  [1]: http://www.google.com/
-  [yahoo]: http://www.yahoo.com/
-
-
-Here's a <span class="hi">[poorly-named link](http://www.google.com/ "Google")</span>.
-Never write "[click here][^2]".
-Visit [us][web].
-  [^2]: http://www.w3.org/QA/Tips/noClickHere
-        (Advice against the phrase "click here")
-  [web]: http://meta.stackoverflow.com/ "Meta Stack Overflow"
