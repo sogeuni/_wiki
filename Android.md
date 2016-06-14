@@ -1,1 +1,1 @@
-<<Navigation(안드로이드, 안드로이드)>>
+<<Navigation("", Android)>>
