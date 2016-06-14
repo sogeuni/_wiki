@@ -1,1 +1,1 @@
-<<Navigation("", Android Auto)>>
+<<Navigation("", "Android Auto")>>
