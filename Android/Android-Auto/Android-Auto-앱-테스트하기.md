@@ -64,3 +64,5 @@ $ mic play <sound_file_path>/<sound_file>.wav
 ```
 
 ```<sdk>/extras/google/auto/voice/``` 디렉토리에 일반적인 명령어 음성파일이 몇개 있습니다.
+
+[[Android]]
