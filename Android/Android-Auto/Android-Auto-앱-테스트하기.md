@@ -71,3 +71,11 @@ Here's a very readable link to [Yahoo!][yahoo].
 
   [1]: http://www.google.com/
   [yahoo]: http://www.yahoo.com/
+
+
+Here's a <span class="hi">[poorly-named link](http://www.google.com/ "Google")</span>.
+Never write "[click here][^2]".
+Visit [us][web].
+  [^2]: http://www.w3.org/QA/Tips/noClickHere
+        (Advice against the phrase "click here")
+  [web]: http://meta.stackoverflow.com/ "Meta Stack Overflow"
