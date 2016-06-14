@@ -1,1 +1,3 @@
 Aaaa
+
+<<GlobalTOC()>>
