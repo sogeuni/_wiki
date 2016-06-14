@@ -25,7 +25,10 @@ $ sudo apt-get install libsdl2-2.0-0 libsdl2-ttf-2.0-0 libportaudio2 libpng12-0
 4. 모바일 장치를 PC에 USB로 연결합니다.
 5. 모바일 장치의 화면 잠금이 해제되었는지 확인합니다. 그렇지 않으면 DHU가 실행되지 않습니다.
 6. PC와 모바일 장치를 동일한 5277 포트로 연결하기 위해 다음의 ```adb``` 명령을 실행합니다. 이 설정은 DHU가 모바일에 실행중인 헤드유닛 서버에 TCP 소켓으로 연결되도록 합니다.
+  
+  ```
   $ adb forward tcp:5277 tcp:5277
+  ```
 7. <p>```<sdk>/extras/google/auto/``` 디렉토리의 ```desktop-head-unit.exe``` (윈도우)나 ```./desktop-head-unit``` (맥 또는 리눅스) 명령어를 실행하여 DHU를 시작합니다.
 ```shell
 $ cd <sdk>/extras/google/auto&#10;
