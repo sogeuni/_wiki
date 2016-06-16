@@ -28,7 +28,7 @@ dependencies {
 
 ## 파서 jar를 다운로드 하여 사용하기
 
-Maven을 사용하기를 원하지 않는다면 [https://repository.apache.org/content/groups/snapshots/org/apache/wookie/wookie-parser/ Apache repository]에서 다운로드<ref>현재 라이브러리가 존재하지 않음</ref>하던지 [http://wookie.apache.org/docs/download.html 최신의 Wookie 릴리즈]에서 배포되는 사본을 이용할 수 있습니다. 이 경우 Wookie가 의존성을 가지는 라이브러리 역시 포함하여야 합니다. (**Jdom, icu4j, slf4j, commons-httpclient, commons-logging, commons-compress, commons-io, commons-lang**)
+Maven을 사용하기를 원하지 않는다면 [Apache repository](https://repository.apache.org/content/groups/snapshots/org/apache/wookie/wookie-parser/)에서 다운로드[^1]하던지 [최신의 Wookie 릴리즈](http://wookie.apache.org/docs/download.html)에서 배포되는 사본을 이용할 수 있습니다. 이 경우 Wookie가 의존성을 가지는 라이브러리 역시 포함하여야 합니다. (**Jdom, icu4j, slf4j, commons-httpclient, commons-logging, commons-compress, commons-io, commons-lang**)
 
 ## 파서 빌드하기
 
@@ -85,7 +85,7 @@ LocalizationUtils은 언어의 다양성과 확장성에 기초하여 적절한 
 
 ## Outputter
 
-파서 라이브러리는 [http://www.w3.org/TR/widgets/ W3C Widgets: Packaging and Configuration] 스펙에 따라 config.xml파일을 생성하는데 사용할 수 있는 **WidgetOutputter** 클래스를 가지고 있습니다.
+파서 라이브러리는 [W3C Widgets: Packaging and Configuration](http://www.w3.org/TR/widgets/) 스펙에 따라 config.xml파일을 생성하는데 사용할 수 있는 **WidgetOutputter** 클래스를 가지고 있습니다.
 
 W3CWidget 오브젝트의 config.xml을 String으로 내보내기 위해 다음과 같이 사용합니다.
 
@@ -126,5 +126,6 @@ outputter.outputXML(widget, out);
 ### features
 추가구현을 위한 feature이며 “http://wave.google.com”과 같이 IRIs[^IRIs]의 형태로 제공되어야 합니다. feature는 위젯에서 요청한 feature와 일치하여야 하며, 만약 위젯이 요청한 feature를 지원하지 않는다면 위젯 패키지 파싱시에 Exception을 발생시킵니다. 이 속성의 기본값은 빈 String array 입니다.
 
+[^1]: 현재 라이브러리가 존재하지 않음
 [^BCP47]: Tags for Identifying Languages
 [^IRIs]: **I**nternationalized **R**esource **I**dentifiers
