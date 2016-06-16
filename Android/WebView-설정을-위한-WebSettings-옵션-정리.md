@@ -40,7 +40,7 @@ file 스킴의 URL의 컨텍스트 내에서 자바스크립트에 접근할 수
 void setAllowUniversalAccessFromFileURLs (boolean flag)
 ```
 
-위의 [setAllowFileAccessFromFileURLs](#setAllowFileAccessFromFileURLs) 와 비슷하지만 다른 도메인의 경우에도 허용하는 점이 다릅니다. 역시나 ICE_CREAM_SANDWICH_MR1 이하에서는 **true**로 설정되어 있으며, JELLY_BEAN 이후는 **false**로 설정되어 있습니다.
+위의 [setAllowFileAccessFromFileURLs](#보안관련-설정_setallowfileaccessfromfileurls) 와 비슷하지만 다른 도메인의 경우에도 허용하는 점이 다릅니다. 역시나 ICE_CREAM_SANDWICH_MR1 이하에서는 **true**로 설정되어 있으며, JELLY_BEAN 이후는 **false**로 설정되어 있습니다.
 
 ### setBlockNetworkImage
 
@@ -50,7 +50,7 @@ void setBlockNetworkImage (boolean flag)
 
 네트워크를 통한(http와 https URI 스킴을 통해 접근하는) 이미지 리소스를 로딩할지의 여부를 결정합니다.(**true**일 경우 이미지로딩 금지)
 
-[getLoadsImagesAutomatically()](#getLoadsImagesAutomatically)의 결과값이 **true**일 경우 이 설정은 효과가 없습니다. 또한 [setBlockNetworkLoads(boolean)](#setBlockNetworkLoads)을 사용하여 모든 네트워크 로드를 막았을 경우에는 이 값이 **false**일지라도 네트워크 이미지는 로딩되지 않습니다. 이 값이 **true**에서 **false**로 바뀌면 WebView의 컨텐츠의 네트워크 이미지는 자동으로 로딩됩니다.
+[getLoadsImagesAutomatically()](#getLoadsImagesAutomatically)의 결과값이 **true**일 경우 이 설정은 효과가 없습니다. 또한 [setBlockNetworkLoads(boolean)](#보안관련-설정_setblocknetworkloads)을 사용하여 모든 네트워크 로드를 막았을 경우에는 이 값이 **false**일지라도 네트워크 이미지는 로딩되지 않습니다. 이 값이 **true**에서 **false**로 바뀌면 WebView의 컨텐츠의 네트워크 이미지는 자동으로 로딩됩니다.
 
 이 설정의 기본값은 **false**(네트워크 이미지 사용가능)입니다.
 
@@ -60,7 +60,7 @@ void setBlockNetworkImage (boolean flag)
 void setBlockNetworkLoads (boolean flag)
 ```
 
-네트워크를 통한 이미지를 포함한 모든 리소스의 로딩여부를 결정합니다. 이 값이 **true**에서 **false**로 바뀌면 [setBlockNetworkImage](#setBlockNetworkImage) 과는 다르게 `reload()`가 호출될 때 까지 리소스가 로딩되지 않습니다. 어플리케이션이 **INTERNET** 퍼미션을 가지지 않는 경우 이 값을 **false**로 설정하면 `SecurityException`이 발생됩니다.
+네트워크를 통한 이미지를 포함한 모든 리소스의 로딩여부를 결정합니다. 이 값이 **true**에서 **false**로 바뀌면 [setBlockNetworkImage](#보안관련-설정_setblocknetworkimage) 과는 다르게 `reload()`가 호출될 때 까지 리소스가 로딩되지 않습니다. 어플리케이션이 **INTERNET** 퍼미션을 가지지 않는 경우 이 값을 **false**로 설정하면 `SecurityException`이 발생됩니다.
 
 이 설정의 기본값은 **INTERNET** 퍼미션이 설정되어 있는 경우 **false**, 아닌 경우에는 **true** 입니다.
 
@@ -104,7 +104,7 @@ void setJavaScriptCanOpenWindowsAutomatically (boolean flag)
 void setAppCacheEnabled (boolean flag)
 ```
 
-어플리케이션 캐시 API의 활성화 여부를 결정합니다. 기본값은 **false** 이며, 어플리케이션 캐시를 활성화 하기 위해서는 [setAppCachePath(String)](#setAppCachePath) 로 적절한 database 경로도 설정하여야 합니다.
+어플리케이션 캐시 API의 활성화 여부를 결정합니다. 기본값은 **false** 이며, 어플리케이션 캐시를 활성화 하기 위해서는 [setAppCachePath(String)](#데이터-저장-관련-설정_setappcachepath) 로 적절한 database 경로도 설정하여야 합니다.
 
 ### setAppCachePath
 
@@ -163,7 +163,7 @@ form 데이터를 저장할 수 있도록 설정합니다. 기본값은 **true**
 void setLoadsImagesAutomatically (boolean flag)
 ```
 
-WebView가 이미지를 자동으로 로드할지를 결정합니다. 이 메소드는 데이터 URI 스킴을 사용하는 내장된 이미지를 포함합니다. [setBlockNetworkImage(boolean)](#setBlockNetworkImage)을 사용하면 네트워크 URI를 사용하는 이미지만 컨트롤 합니다. 이 값이 **false**에서 **true**로 바뀌면 WebView는 리프레시 없이 자동으로 모든 이미지를 로드합니다. 기본값은 **true**입니다.
+WebView가 이미지를 자동으로 로드할지를 결정합니다. 이 메소드는 데이터 URI 스킴을 사용하는 내장된 이미지를 포함합니다. [setBlockNetworkImage(boolean)](#보안관련-설정_setblocknetworkimage)을 사용하면 네트워크 URI를 사용하는 이미지만 컨트롤 합니다. 이 값이 **false**에서 **true**로 바뀌면 WebView는 리프레시 없이 자동으로 모든 이미지를 로드합니다. 기본값은 **true**입니다.
 
 ### setLayoutAlgorithm
 
@@ -176,7 +176,7 @@ void setLayoutAlgorithm (WebSettings.LayoutAlgorithm l)
 * **NORMAL**: 렌더링을 변경하지 않습니다. 호환성을 위해 추천하는 옵션입니다.
 * **SINGLE_COLUMN**: view 너비만큼의 하나의 컬럼으로 모든 컨텐츠를 이동합니다.
 * **NARROW_COLUMNS**: 가능한한 모든 컬럼을 화면너비보다 넓게 하지 않습니다. KITKAT이전의 API 레벨에서만 사용합니다.
-* **TEXT_AUTOSIZING** : Overview 모드의 wide-viewport 레이아웃에서 휴리스틱한 방법에 의거 글자를 키웁니다. 이 모드를 사용할 때에는 [setSupportZoom(boolean)](#setSupportZoom)으로 zoom을 활성화하는 것을 추천합니다. KITKAT부터 지원합니다.
+* **TEXT_AUTOSIZING** : Overview 모드의 wide-viewport 레이아웃에서 휴리스틱한 방법에 의거 글자를 키웁니다. 이 모드를 사용할 때에는 [setSupportZoom(boolean)](#컨텐츠-표시-관련-설정_setsupportzoom)으로 zoom을 활성화하는 것을 추천합니다. KITKAT부터 지원합니다.
 
 ### setLoadWithOverviewMode
 
@@ -221,7 +221,7 @@ WebView에서 "viewport" HTML 메타태그 혹은 wide viewport를 지원할지�
 void setSupportZoom (boolean support)
 ```
 
-온스크린 줌 컨트롤과 제스처를 이용하여 줌을 가능하게 할 지 결정합니다. 특정 줌 메커니즘을 사용할 지의 여부는 [setBuiltInZoomControls(boolean)](#setBuiltInZoomControls)으로 설정할 수 있으며 `zoomIn()`과 `zoomOut()`을 사용하는 데에는 영향을 주지 않습니다. 기본값은 **true** 입니다.
+온스크린 줌 컨트롤과 제스처를 이용하여 줌을 가능하게 할 지 결정합니다. 특정 줌 메커니즘을 사용할 지의 여부는 [setBuiltInZoomControls(boolean)](#컨텐츠-표시-관련-설정_setbuiltinzoomcontrols)으로 설정할 수 있으며 `zoomIn()`과 `zoomOut()`을 사용하는 데에는 영향을 주지 않습니다. 기본값은 **true** 입니다.
 
 ### setBuiltInZoomControls
 
@@ -229,7 +229,7 @@ void setSupportZoom (boolean support)
 void setBuiltInZoomControls (boolean enabled)
 ```
 
-빌트인된 줌 메커니즘을 사용할지를 결정합니다. 빌트인 줌 메커니즘은 WebView의 컨텐츠위에 표시되는 온스크린 줌 컨트롤과 핀치 제스처를 통한 줌 컨트롤을 포함합니다. 온스크린 컨트롤을 보여지게 할지는 [setDisplayZoomControls(boolean)](#setDisplayZoomControls)로 설정합니다. 이 설정의 기본값은 **false** 입니다.
+빌트인된 줌 메커니즘을 사용할지를 결정합니다. 빌트인 줌 메커니즘은 WebView의 컨텐츠위에 표시되는 온스크린 줌 컨트롤과 핀치 제스처를 통한 줌 컨트롤을 포함합니다. 온스크린 컨트롤을 보여지게 할지는 [setDisplayZoomControls(boolean)](#컨텐츠-표시-관련-설정_setdisplayzoomcontrols)로 설정합니다. 이 설정의 기본값은 **false** 입니다.
 
 빌트인 메커니즘는 현재 지원되는 줌 메커니즘만 가지므로 이 옵션은 항상 활성화하는 것을 추천합니다.
 
@@ -399,77 +399,85 @@ void setAppCacheMaxSize (long appCacheMaxSize)
 
 ~~어플리케이션 캐시의 최대 크기를 지정합니다. 입력된 크기는 데이터베이스가 지원하는 가장 가까운 값으로 반올림되므로 hard limit이 아닌 가이드입니다. 현재 데이터베이스의 크기보다 작게 설정하여도 데이터베이스를 trim하지 않습니다. 기본값은 MAX_VALUE(2^63-1)이며 이값을 바꾸는 것을 권장합니다.~~
 
-### setDatabasePath
+### ~~setDatabasePath~~
 
 ```java
 void setDatabasePath (String databasePath)
 ```
 
-<blockquote>이 메소드는 API 레벨 19부터 deprecated 되었습니다. 19버전부터는 크로미움 WebView가 사용되므로 크로미움 엔진이 경로를 관리하게 되며 이 메소드를 호출해도 아무런 영향이 없습니다.</blockquote>
-<strike>데이터베이스의 경로를 지정합니다. 어플리케이션이 write 권한이 있는 패스를 지정해야 하며 한번만 호출해야 합니다. 이후의 호출은 무시됩니다.</strike>
+> 이 메소드는 API 레벨 19부터 deprecated 되었습니다. 19버전부터는 크로미움 WebView가 사용되므로 크로미움 엔진이 경로를 관리하게 되며 이 메소드를 호출해도 아무런 영향이 없습니다.
 
-### setDefaultZoom
+~~데이터베이스의 경로를 지정합니다. 어플리케이션이 write 권한이 있는 패스를 지정해야 하며 한번만 호출해야 합니다. 이후의 호출은 무시됩니다.~~
+
+### ~~setDefaultZoom~~
 
 ```java
 void setDefaultZoom (WebSettings.ZoomDensity zoom)
 ```
 
-<blockquote>이 메소드는 API 레벨 19부터 deprecated 되었습니다. 이 메소드는 더이상 지원되지 않습니다.</blockquote>
-<strike>페이지의 기본 zoom density를 설정합니다. 이 메소드는 UI 스레드로 부터 불려야 하며 기본값은 MEDIUM입니다.</strike>
+> 이 메소드는 API 레벨 19부터 deprecated 되었습니다. 이 메소드는 더이상 지원되지 않습니다.
 
-### setEnableSmoothTransition
+~~페이지의 기본 zoom density를 설정합니다. 이 메소드는 UI 스레드로 부터 불려야 하며 기본값은 MEDIUM입니다.~~
+
+### ~~setEnableSmoothTransition~~
 
 ```java
 void setEnableSmoothTransition (boolean enable)
 ```
 
-<blockquote>이 메소드는 API 레벨 17부터 deprecated 되었습니다. 이 메소드는 현재 사용되지 않습니다. 추후에는 없어질 것입니다.</blockquote>
-<strike>패닝이나 줌동작시 부드러운 트랜지션을 할지를 결정합니다. 기본값은 false입니다.</strike>
+> 이 메소드는 API 레벨 17부터 deprecated 되었습니다. 이 메소드는 현재 사용되지 않습니다. 추후에는 없어질 것입니다.
 
-### setLightTouchEnabled
+~~패닝이나 줌동작시 부드러운 트랜지션을 할지를 결정합니다. 기본값은 false입니다.~~
+
+### ~~setLightTouchEnabled~~
 
 ```java
 void setLightTouchEnabled (boolean enabled)
 ```
 
-<blockquote>이 메소드는 API 레벨 18부터 deprecated 되었습니다. JELLY_BEAN부터 이 설정은 사용되지 않으며 아무런 효과도 나타나지 않습니다.</blockquote>
-<strike>mouseover를 활성화하기 위해 light touch의 사용을 가능하게 합니다.</strike>
+> 이 메소드는 API 레벨 18부터 deprecated 되었습니다. JELLY_BEAN부터 이 설정은 사용되지 않으며 아무런 효과도 나타나지 않습니다.
 
-### setPluginState
+~~mouseover를 활성화하기 위해 light touch의 사용을 가능하게 합니다.~~
+
+### ~~setPluginState~~
 
 ```java
 void setPluginState (WebSettings.PluginState state)
 ```
 
-<blockquote>이 메소드는 API 레벨 18부터 deprecated 되었습니다. 향후 플러그인은 지원되지 않습니다.</blockquote>
-<strike>WebView에서 플러그인을 사용할지를 결정합니다. ON, OFF, ON_DEMAND 값을 지정할 수 있으며 온디맨드의 경우 플러그인영역에 placeholder가 나타나며 클릭스 플러그인이 활성화 되는 것입니다. 기본값은 OFF입니다.</strike>
+> 이 메소드는 API 레벨 18부터 deprecated 되었습니다. 향후 플러그인은 지원되지 않습니다.
 
-### setRenderPriority
+~~WebView에서 플러그인을 사용할지를 결정합니다. ON, OFF, ON_DEMAND 값을 지정할 수 있으며 온디맨드의 경우 플러그인영역에 placeholder가 나타나며 클릭스 플러그인이 활성화 되는 것입니다. 기본값은 OFF입니다.~~
+
+### ~~setRenderPriority~~
 
 ```java
 void setRenderPriority (WebSettings.RenderPriority priority)
 ```
 
-<blockquote>이 메소드는 API 레벨 18부터 deprecated 되었습니다. 스레드의 우선순위를 조정하는 것은 권장하지 않으며, 향후에는 지원하지 않을 것입니다.</blockquote>
-<strike>렌더 스레드의 우선순위를 결정합니다. 다른 설정과는 달리 하나의 프로세스당 한번만 호출 가능합니다. 기본값은 NORMAL입니다.</strike>
+> 이 메소드는 API 레벨 18부터 deprecated 되었습니다. 스레드의 우선순위를 조정하는 것은 권장하지 않으며, 향후에는 지원하지 않을 것입니다.
 
-### setSavePassword
+~~렌더 스레드의 우선순위를 결정합니다. 다른 설정과는 달리 하나의 프로세스당 한번만 호출 가능합니다. 기본값은 NORMAL입니다.~~
+
+### ~~setSavePassword~~
 
 ```java
 void setSavePassword (boolean save)
 ```
 
-<blockquote>이 메소드는 API 레벨 18부터 deprecated 되었습니다. 이후 버전부터는 WebView에서 password를 저장하는 것은 지원하지 않습니다.</blockquote>
-<strike>WebView가 password를 저장할지를 설정합니다. 기본값은 true 입니다.</strike>
+> 이 메소드는 API 레벨 18부터 deprecated 되었습니다. 이후 버전부터는 WebView에서 password를 저장하는 것은 지원하지 않습니다.
 
-### setTextSize
+~~WebView가 password를 저장할지를 설정합니다. 기본값은 true 입니다.~~
+
+### ~~setTextSize~~
 
 ```java
 void setTextSize (WebSettings.TextSize t)
 ```
 
-<blockquote>이 메소드는 API 레벨 14부터 deprecated 되었습니다. [[#setTextZoom|setTextZoom(int)]]를 사용하세요.</blockquote>
-<strike>페이지의 텍스트 크기를 설정합니다. 기본값은 NORMAL입니다.</strike>
+> 이 메소드는 API 레벨 14부터 deprecated 되었습니다. [setTextZoom(int)](#컨텐츠-표시-관련-설정_settextzoom)를 사용하세요.
+
+~~페이지의 텍스트 크기를 설정합니다. 기본값은 NORMAL입니다.~~
 
 [^ver]: 이 글의 WebSetting 메소드들은 **API 레벨 23**을 기준으로 합니다.
 [^same-origin_policy]: 동일 출처 정책(same-origin policy)은 한 출처(origin)에서 로드된 문서나 스크립트가 다른 출처 자원과 상호작용하지 못하도록 제약하는 것
