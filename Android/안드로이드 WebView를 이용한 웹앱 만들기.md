@@ -45,7 +45,7 @@ WebView에서 JavaScript를 사용하려면 자바스크립트를 활성화하�
 
 ### JavaScript 활성화하기
 
-WebView는 기본적으로 자바스크립트의 사용이 비활성화 되어 있으며 WebView에 연결된 [WebSettings](http://developer.android.com/reference/android/webkit/WebSettings.html)를 통해서 활성화 할 수 있습니다. `getSettings()`를 통해 WebSettings를 가져올 수 있고 [[안드로이드_WebView_설정을_위한_WebSettings_옵션_정리#setJavaScriptEnabled|setJavaScriptEnabled()]]로 자바스크립트를 활성화 할 수 있습니다.
+WebView는 기본적으로 자바스크립트의 사용이 비활성화 되어 있으며 WebView에 연결된 [WebSettings](http://developer.android.com/reference/android/webkit/WebSettings.html)를 통해서 활성화 할 수 있습니다. `getSettings()`를 통해 WebSettings를 가져올 수 있고 [setJavaScriptEnabled()](WebView-설정을-위한-WebSettings-옵션-정리#javascript-관련-설정_setjavascriptenabled)로 자바스크립트를 활성화 할 수 있습니다.
 
 ```java
 WebView myWebView = (WebView) findViewById(R.id.webview);
