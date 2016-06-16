@@ -32,7 +32,7 @@ file 스킴의 URL의 컨텍스트 내에서 자바스크립트에 접근할 수
 
 [getAllowUniversalAccessFromFileURLs()](#getAllowUniversalAccessFromFileURLs) 값이 **true** 일 경우 이 값은 무시됩니다. 또한 이 설정은 file 스킴 리소스로 자바스크립트에 접근할 때만 효과가 나타납니다. 예를들어 이미지 HTML 엘리먼트와 같은 다른 리소스에 접근할때는 효과가 나타나지 않습니다. ICE_CREAM_SANDWICH 이전의 장치에서 same domain policy[^same-origin_policy] 위반을 막기 위해서는 명시적으로 이 값을 false로 설정하여야 합니다.
 
-[http://developer.android.com/intl/ko/reference/android/os/Build.VERSION_CODES.html#ICE_CREAM_SANDWICH_MR1 ICE_CREAM_SANDWICH_MR1] 이하의 API 레벨에서는 기본값이 **true** 이며 [http://developer.android.com/intl/ko/reference/android/os/Build.VERSION_CODES.html#JELLY_BEAN JELLY_BEAN] 이상은 **false** 입니다.
+[ICE_CREAM_SANDWICH_MR1](http://developer.android.com/intl/ko/reference/android/os/Build.VERSION_CODES.html#ICE_CREAM_SANDWICH_MR1) 이하의 API 레벨에서는 기본값이 **true** 이며 [JELLY_BEAN](http://developer.android.com/intl/ko/reference/android/os/Build.VERSION_CODES.html#JELLY_BEAN) 이상은 **false** 입니다.
 
 ### setAllowUniversalAccessFromFileURLs
 
@@ -40,7 +40,7 @@ file 스킴의 URL의 컨텍스트 내에서 자바스크립트에 접근할 수
 void setAllowUniversalAccessFromFileURLs (boolean flag)
 ```
 
-위의 [[#setAllowFileAccessFromFileURLs|setAllowFileAccessFromFileURLs]] 와 비슷하지만 다른 도메인의 경우에도 허용하는 점이 다릅니다. 역시나 ICE_CREAM_SANDWICH_MR1 이하에서는 **true**로 설정되어 있으며, JELLY_BEAN 이후는 **false**로 설정되어 있습니다.
+위의 [setAllowFileAccessFromFileURLs](#setAllowFileAccessFromFileURLs) 와 비슷하지만 다른 도메인의 경우에도 허용하는 점이 다릅니다. 역시나 ICE_CREAM_SANDWICH_MR1 이하에서는 **true**로 설정되어 있으며, JELLY_BEAN 이후는 **false**로 설정되어 있습니다.
 
 ### setBlockNetworkImage
 
@@ -50,7 +50,7 @@ void setBlockNetworkImage (boolean flag)
 
 네트워크를 통한(http와 https URI 스킴을 통해 접근하는) 이미지 리소스를 로딩할지의 여부를 결정합니다.(**true**일 경우 이미지로딩 금지)
 
-[[#getLoadsImagesAutomatically|getLoadsImagesAutomatically()]]의 결과값이 **true**일 경우 이 설정은 효과가 없습니다. 또한 [[#setBlockNetworkLoads|setBlockNetworkLoads(boolean)]]을 사용하여 모든 네트워크 로드를 막았을 경우에는 이 값이 **false**일지라도 네트워크 이미지는 로딩되지 않습니다. 이 값이 **true**에서 **false**로 바뀌면 WebView의 컨텐츠의 네트워크 이미지는 자동으로 로딩됩니다.
+[getLoadsImagesAutomatically()](#getLoadsImagesAutomatically)의 결과값이 **true**일 경우 이 설정은 효과가 없습니다. 또한 [setBlockNetworkLoads(boolean)](#setBlockNetworkLoads)을 사용하여 모든 네트워크 로드를 막았을 경우에는 이 값이 **false**일지라도 네트워크 이미지는 로딩되지 않습니다. 이 값이 **true**에서 **false**로 바뀌면 WebView의 컨텐츠의 네트워크 이미지는 자동으로 로딩됩니다.
 
 이 설정의 기본값은 **false**(네트워크 이미지 사용가능)입니다.
 
@@ -60,7 +60,7 @@ void setBlockNetworkImage (boolean flag)
 void setBlockNetworkLoads (boolean flag)
 ```
 
-네트워크를 통한 이미지를 포함한 모든 리소스의 로딩여부를 결정합니다. 이 값이 **true**에서 **false**로 바뀌면 [[#setBlockNetworkImage|setBlockNetworkImage]] 과는 다르게 `reload()`가 호출될 때 까지 리소스가 로딩되지 않습니다. 어플리케이션이 **INTERNET** 퍼미션을 가지지 않는 경우 이 값을 **false**로 설정하면 `SecurityException`이 발생됩니다.
+네트워크를 통한 이미지를 포함한 모든 리소스의 로딩여부를 결정합니다. 이 값이 **true**에서 **false**로 바뀌면 [setBlockNetworkImage](#setBlockNetworkImage) 과는 다르게 `reload()`가 호출될 때 까지 리소스가 로딩되지 않습니다. 어플리케이션이 **INTERNET** 퍼미션을 가지지 않는 경우 이 값을 **false**로 설정하면 `SecurityException`이 발생됩니다.
 
 이 설정의 기본값은 **INTERNET** 퍼미션이 설정되어 있는 경우 **false**, 아닌 경우에는 **true** 입니다.
 
@@ -104,7 +104,7 @@ void setJavaScriptCanOpenWindowsAutomatically (boolean flag)
 void setAppCacheEnabled (boolean flag)
 ```
 
-어플리케이션 캐시 API의 활성화 여부를 결정합니다. 기본값은 **false** 이며, 어플리케이션 캐시를 활성화 하기 위해서는 [[#setAppCachePath|setAppCachePath(String)]] 로 적절한 database 경로도 설정하여야 합니다.
+어플리케이션 캐시 API의 활성화 여부를 결정합니다. 기본값은 **false** 이며, 어플리케이션 캐시를 활성화 하기 위해서는 [setAppCachePath(String)](#setAppCachePath) 로 적절한 database 경로도 설정하여야 합니다.
 
 ### setAppCachePath
 
@@ -163,7 +163,7 @@ form 데이터를 저장할 수 있도록 설정합니다. 기본값은 **true**
 void setLoadsImagesAutomatically (boolean flag)
 ```
 
-WebView가 이미지를 자동으로 로드할지를 결정합니다. 이 메소드는 데이터 URI 스킴을 사용하는 내장된 이미지를 포함합니다. [[#setBlockNetworkImage|setBlockNetworkImage(boolean)]]을 사용하면 네트워크 URI를 사용하는 이미지만 컨트롤 합니다. 이 값이 **false**에서 **true**로 바뀌면 WebView는 리프레시 없이 자동으로 모든 이미지를 로드합니다. 기본값은 **true**입니다.
+WebView가 이미지를 자동으로 로드할지를 결정합니다. 이 메소드는 데이터 URI 스킴을 사용하는 내장된 이미지를 포함합니다. [setBlockNetworkImage(boolean)](#setBlockNetworkImage)을 사용하면 네트워크 URI를 사용하는 이미지만 컨트롤 합니다. 이 값이 **false**에서 **true**로 바뀌면 WebView는 리프레시 없이 자동으로 모든 이미지를 로드합니다. 기본값은 **true**입니다.
 
 ### setLayoutAlgorithm
 
@@ -176,7 +176,7 @@ void setLayoutAlgorithm (WebSettings.LayoutAlgorithm l)
 * **NORMAL**: 렌더링을 변경하지 않습니다. 호환성을 위해 추천하는 옵션입니다.
 * **SINGLE_COLUMN**: view 너비만큼의 하나의 컬럼으로 모든 컨텐츠를 이동합니다.
 * **NARROW_COLUMNS**: 가능한한 모든 컬럼을 화면너비보다 넓게 하지 않습니다. KITKAT이전의 API 레벨에서만 사용합니다.
-* **TEXT_AUTOSIZING** : Overview 모드의 wide-viewport 레이아웃에서 휴리스틱한 방법에 의거 글자를 키웁니다. 이 모드를 사용할 때에는 [[#setSupportZoom|setSupportZoom(boolean)]]으로 zoom을 활성화하는 것을 추천합니다. KITKAT부터 지원합니다.
+* **TEXT_AUTOSIZING** : Overview 모드의 wide-viewport 레이아웃에서 휴리스틱한 방법에 의거 글자를 키웁니다. 이 모드를 사용할 때에는 [setSupportZoom(boolean)](#setSupportZoom)으로 zoom을 활성화하는 것을 추천합니다. KITKAT부터 지원합니다.
 
 ### setLoadWithOverviewMode
 
@@ -221,7 +221,7 @@ WebView에서 "viewport" HTML 메타태그 혹은 wide viewport를 지원할지�
 void setSupportZoom (boolean support)
 ```
 
-온스크린 줌 컨트롤과 제스처를 이용하여 줌을 가능하게 할 지 결정합니다. 특정 줌 메커니즘을 사용할 지의 여부는 [[#setBuiltInZoomControls|setBuiltInZoomControls(boolean)]]으로 설정할 수 있으며 `zoomIn()`과 `zoomOut()`을 사용하는 데에는 영향을 주지 않습니다. 기본값은 **true** 입니다.
+온스크린 줌 컨트롤과 제스처를 이용하여 줌을 가능하게 할 지 결정합니다. 특정 줌 메커니즘을 사용할 지의 여부는 [setBuiltInZoomControls(boolean)](#setBuiltInZoomControls)으로 설정할 수 있으며 `zoomIn()`과 `zoomOut()`을 사용하는 데에는 영향을 주지 않습니다. 기본값은 **true** 입니다.
 
 ### setBuiltInZoomControls
 
@@ -229,7 +229,7 @@ void setSupportZoom (boolean support)
 void setBuiltInZoomControls (boolean enabled)
 ```
 
-빌트인된 줌 메커니즘을 사용할지를 결정합니다. 빌트인 줌 메커니즘은 WebView의 컨텐츠위에 표시되는 온스크린 줌 컨트롤과 핀치 제스처를 통한 줌 컨트롤을 포함합니다. 온스크린 컨트롤을 보여지게 할지는 [[#setDisplayZoomControls|setDisplayZoomControls(boolean)]]로 설정합니다. 이 설정의 기본값은 **false** 입니다.
+빌트인된 줌 메커니즘을 사용할지를 결정합니다. 빌트인 줌 메커니즘은 WebView의 컨텐츠위에 표시되는 온스크린 줌 컨트롤과 핀치 제스처를 통한 줌 컨트롤을 포함합니다. 온스크린 컨트롤을 보여지게 할지는 [setDisplayZoomControls(boolean)](#setDisplayZoomControls)로 설정합니다. 이 설정의 기본값은 **false** 입니다.
 
 빌트인 메커니즘는 현재 지원되는 줌 메커니즘만 가지므로 이 옵션은 항상 활성화하는 것을 추천합니다.
 
@@ -389,14 +389,15 @@ WebView의 user-agent 문자열을 설정합니다. 만약 문자열이 비었�
 
 ## Deprecated 된 설정들
 
-### setAppCacheMaxSize
+### ~~setAppCacheMaxSize~~
 
 ```java
 void setAppCacheMaxSize (long appCacheMaxSize)
 ```
 
-<blockquote>이 메소드는 API 레벨 18부터 deprecated 되었습니다. 이후부터는 할당량을 자동으로 관리합니다.</blockquote>
-<strike>어플리케이션 캐시의 최대 크기를 지정합니다. 입력된 크기는 데이터베이스가 지원하는 가장 가까운 값으로 반올림되므로 hard limit이 아닌 가이드입니다. 현재 데이터베이스의 크기보다 작게 설정하여도 데이터베이스를 trim하지 않습니다. 기본값은 MAX_VALUE(2^63-1)이며 이값을 바꾸는 것을 권장합니다.</strike>
+> 이 메소드는 API 레벨 18부터 deprecated 되었습니다. 이후부터는 할당량을 자동으로 관리합니다.
+
+~~어플리케이션 캐시의 최대 크기를 지정합니다. 입력된 크기는 데이터베이스가 지원하는 가장 가까운 값으로 반올림되므로 hard limit이 아닌 가이드입니다. 현재 데이터베이스의 크기보다 작게 설정하여도 데이터베이스를 trim하지 않습니다. 기본값은 MAX_VALUE(2^63-1)이며 이값을 바꾸는 것을 권장합니다.~~
 
 ### setDatabasePath
 
