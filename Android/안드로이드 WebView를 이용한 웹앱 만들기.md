@@ -53,7 +53,7 @@ WebSettings webSettings = myWebView.getSettings();
 webSettings.setJavaScriptEnabled(true);
 ```
 
-WebSettings는 WebView의 다양한 설정을 제공합니다. 예를 들어, 안드로이드 어플리케이션에서 WebView를 위해 특별히 디자인된 웹어플리케이션을 개발한다면 [[안드로이드_WebView_설정을_위한_WebSettings_옵션_정리#setUserAgentString|setUserAgentString()]]을 통해 커스텀 유저 에이전트를 정의할 수 있고, 그런 다음 엡페이지가 실제로 안드로이드 어플리케이션에서 호출되었는지 확인하기 위해 웹페이지에서 커스텀 유저 에이전트를 조회할 수 있습니다.
+WebSettings는 WebView의 다양한 설정을 제공합니다. 예를 들어, 안드로이드 어플리케이션에서 WebView를 위해 특별히 디자인된 웹어플리케이션을 개발한다면 [setUserAgentString()](WebView-설정을-위한-WebSettings-옵션-정리#기타-설정_setuseragentstring)을 통해 커스텀 유저 에이전트를 정의할 수 있고, 그런 다음 엡페이지가 실제로 안드로이드 어플리케이션에서 호출되었는지 확인하기 위해 웹페이지에서 커스텀 유저 에이전트를 조회할 수 있습니다.
 
 ### 안드로이드 코드와 자바스크립트 코드의 연결
 
