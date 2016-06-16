@@ -115,7 +115,7 @@ outputter.outputXML(widget, out);
 **IStartPageProcessor** 인터페이스의 구현입니다. 이 속성을 설정하는 것은 위젯의 시작페이저 전에 처리되는 클래스(예를들어, 자바스크립트, HTML, 템플릿 코드 등)를 삽입하는 것을 허용합니다. 만약 이것이 설정되어 있지 않다면 factory에서는 어떠한 전처리도 하지 않습니다.
 
 ### locales
-위젯에서 처리될 지원하는 로케일(BCP47 language-tags[^Tags for Identifying Languages]) 입니다. 이것은 위젯의 시작파일, 아이콘 및 다른 지역화된 엘리먼트 중 어떤 것이 사용될지를 결정하며 기본값은 “en”입니다.
+위젯에서 처리될 지원하는 로케일(BCP47 language-tags[^BCP47]) 입니다. 이것은 위젯의 시작파일, 아이콘 및 다른 지역화된 엘리먼트 중 어떤 것이 사용될지를 결정하며 기본값은 “en”입니다.
 
 ### encodings
 위젯에서 처리될 지원하는 인코딩입니다. 이것은 시작파일에서 허용되는 사용자 정의 인코딩을 결정하며, UTF-8로 기본 설정되어 있습니다.
@@ -124,4 +124,7 @@ outputter.outputXML(widget, out);
 위젯의 압축이 풀리는 기본 URL(“/myapp/widget” 등과 같은) 입니다. 시작파일의 URL은 기본 URL에 생성된 위젯 URL이 추가됩니다. 이 속성의 기본값은 “/widgets” 입니다.
 
 ### features
-추가구현을 위한 feature이며 “http://wave.google.com”과 같이 IRIs[^**I**nternationalized **R**esource **I**dentifiers]의 형태로 제공되어야 합니다. feature는 위젯에서 요청한 feature와 일치하여야 하며, 만약 위젯이 요청한 feature를 지원하지 않는다면 위젯 패키지 파싱시에 Exception을 발생시킵니다. 이 속성의 기본값은 빈 String array 입니다.
+추가구현을 위한 feature이며 “http://wave.google.com”과 같이 IRIs[^IRIs]의 형태로 제공되어야 합니다. feature는 위젯에서 요청한 feature와 일치하여야 하며, 만약 위젯이 요청한 feature를 지원하지 않는다면 위젯 패키지 파싱시에 Exception을 발생시킵니다. 이 속성의 기본값은 빈 String array 입니다.
+
+[^BCP47]: Tags for Identifying Languages
+[^IRIs]: **I**nternationalized **R**esource **I**dentifiers
