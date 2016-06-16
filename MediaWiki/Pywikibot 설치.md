@@ -17,7 +17,7 @@ tar -xzvf core_stable.tar.gz
 
 ## Pywikibot 설정
 
-### Family 파일 생성
+### Family 파일 생성
 
 먼저 미디어위키를 사용하고 있는 서버설정파일(Family 파일)을 생성하기 위해 `generate_family_file.py`을 실행합니다.
 
@@ -152,7 +152,7 @@ Logged out of l2r2:ko.
 
 ### 트러블슈팅
 
-#### HTTP 301 Error
+#### HTTP 301 Error
 
 이 사이트의 경우 http를 자동으로 https로 리다이렉션하도록 되어 있습니다. 이럴경우 로그인시 다음과 같은 오류가 발생하였습니다.
 
