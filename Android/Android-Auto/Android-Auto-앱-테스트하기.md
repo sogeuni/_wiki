@@ -8,7 +8,7 @@ DHU는 윈도우, 맥, 리눅스 OS에 설치가능하며 설치 절차는 다�
 
 * 먼저 모바일 장치의 **개발자 옵션**을 활성화 합니다. 개발자 옵션을 활성화 하기 위해서는 **설정 > 휴대전화 정보 > 빌드 번호** 를 일곱번 탭하면 됩니다.<ref>단말에 따라 위치는 조금씩 다를 수 있습니다. 삼성폰의 경우 **설정 > 디바이스 정보 > 소프트웨어 정보 > 빌드번호** 입니다.</ref>
 * 개발환경 및 설치될 모바일 장치의 안드로이드 버전은 5.0(API level 21) 이상이어야 합니다. 
-* 모바일 장치에 [https://play.google.com/store/apps/details?id=com.google.android.projection.gearhead&hl=en Android Auto app]을 설치합니다. 하지만 현재 국내에서는 마켓을 통해 Android Auto 앱을 설치할 수가 없습니다. google에 "Android Auto apk" 등으로 검색해서 apk를 설치할 수 있습니다.
+* 모바일 장치에 [Android Auto app](https://play.google.com/store/apps/details?id=com.google.android.projection.gearhead&hl=en)을 설치합니다. 하지만 현재 국내에서는 마켓을 통해 Android Auto 앱을 설치할 수가 없습니다. google에 "Android Auto apk" 등으로 검색해서 apk를 설치할 수 있습니다.
 * **SDK Manager**를 열고 ```SDK Tools``` 탭을 선택한 다음 **Android Auto Desktop Head Unit emulator**를 설치합니다. DHU는 ```<sdk>/extras/google/auto/``` 디렉토리에 설치됩니다. sdk의 위치는 SDK Manager 상단에 **Android SDK Location**을 확인하시면 됩니다.
 * 리눅스에서 DHU를 실행하려면 ```portaudio```, ```sdl2```, ```sdl2_ttf``` 라이브러리가 필요합니다.
 ```bash
