@@ -124,7 +124,7 @@ outputter.outputXML(widget, out);
 위젯의 압축이 풀리는 기본 URL(“/myapp/widget” 등과 같은) 입니다. 시작파일의 URL은 기본 URL에 생성된 위젯 URL이 추가됩니다. 이 속성의 기본값은 “/widgets” 입니다.
 
 ### features
-추가구현을 위한 feature이며 “http://wave.google.com”과 같이 IRIs[^IRIs]의 형태로 제공되어야 합니다. feature는 위젯에서 요청한 feature와 일치하여야 하며, 만약 위젯이 요청한 feature를 지원하지 않는다면 위젯 패키지 파싱시에 Exception을 발생시킵니다. 이 속성의 기본값은 빈 String array 입니다.
+추가구현을 위한 feature이며 "http://wave.google.com" 과 같이 IRIs[^IRIs]의 형태로 제공되어야 합니다. feature는 위젯에서 요청한 feature와 일치하여야 하며, 만약 위젯이 요청한 feature를 지원하지 않는다면 위젯 패키지 파싱시에 Exception을 발생시킵니다. 이 속성의 기본값은 빈 String array 입니다.
 
 [^1]: 현재 라이브러리가 존재하지 않음
 [^BCP47]: Tags for Identifying Languages
