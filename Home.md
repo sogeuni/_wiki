@@ -8,4 +8,4 @@ Aaaa
 
 Some long sentence. [^footnote]
 
-[^footnote]: Test, [Link](https://google.com).
+[^footnote]: Test, [Link](https://google.com).aaa
