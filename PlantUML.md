@@ -27,6 +27,8 @@ mvn jetty:run
 
 서버는 `http://localhost:8080/plantuml`로 접속 가능합니다.
 
+[[PlantUML/plantuml-server.png]]
+
 ### 톰캣을 이용하여 구동하기
 
 먼저 톰캣을 설치합니다.
