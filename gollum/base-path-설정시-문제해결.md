@@ -6,7 +6,7 @@ GlobalTOC 매크로의 링크에 base_path가 적용되지 않아 링크가 제�
 
 **해결**: `lib/gollum-lib/macro/global_toc.rb` 파일의 6라인을 다음과 같이 수정
 
-```
+```ruby
 #result = '<ul>' + @wiki.pages.map { |p| "<li><a href=\"/#{p.url_path}\">#{p.url_path_display}</a></li>" }.join + '</ul>'
 result = '<ul>' + @wiki.pages.map { |p| "<li><a href=\"#{@wiki.base_path}/#{p.url_path}\">#{p.url_path_display}</a></li>" }.join + '</ul>'
 ```
