@@ -23,7 +23,12 @@ Volley는 구조화된 데이터의 검색 결과를 페이지에 붙이는 것�
 
 Volley는 파싱하는 동안 모든 응답을 메모리에 가지고 있기 때문에, 대용량의 다운로드나 스트리밍 작업에는 적합하지 않습니다. 큰 다운로드 작업의 경우, [DownloadManager](https://developer.android.com/reference/android/app/DownloadManager.html)와 같은 대안을 사용하는 것이 좋습니다.
 
-Volley 코어 라이브러리는 AOSP 저장소의 `frameworks/volley`에서 개발되고 있으며, Volley에서 사용하는 기본 요청 파이프라인 뿐만 아니라 일반적으로 적용가능한 유틸리티 모음인 **toolbox**를 포함합니다. 프로젝트에 volley를 추가하는 가장 쉬운 방법은 volley 저장소를 clone하고 그것을 라이브러리 프로젝트로 지정하는 것입니다:
+Volley 코어 라이브러리는 AOSP 저장소의 `frameworks/volley`에서 개발되고 있으며, Volley에서 사용하는 기본 요청 파이프라인 뿐만 아니라 일반적으로 적용가능한 유틸리티 모음인 **toolbox**를 포함합니다. 프로젝트에 volley를 추가하는 가장 쉬운 방법은 volley 저장소를 clone하고 그것을 라이브러리 프로젝트로 지정하는 것입니다:[^link]
+
+[^link]: `build.gradle`의 dependencies에 다음을 추가하면 더 간단히 사용할 수 있습니다.
+```
+compile 'com.android.volley:volley:1.0.0'
+```
 
 0. 다음 명령을 이용하여 저장소를 clone 합니다:
 ```
