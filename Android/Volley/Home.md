@@ -2,7 +2,7 @@
 
 https://developer.android.com/training/volley/index.html
 
-발리(Volley)는 안드로이드 앱에서 네트워킹을 쉽고 빠르게 구현하기 위한 HTTP 라이브러리입니다. Volley는 오픈 [AOSP][^AOSP](https://android.googlesource.com/platform/frameworks/volley) 저장소를 통해 사용가능합니다.
+발리(Volley)는 안드로이드 앱에서 네트워킹을 쉽고 빠르게 구현하기 위한 HTTP 라이브러리입니다. Volley는 오픈 [AOSP](https://android.googlesource.com/platform/frameworks/volley)[^AOSP] 저장소를 통해 사용가능합니다.
 
 [^AOSP]: [Android Open Source Project](https://source.android.com/)
 
