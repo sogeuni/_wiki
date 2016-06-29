@@ -1,6 +1,6 @@
 # RequestQueue 설정하기
 
-이전 강좌에서는 volley의 기본동작을 활용하는 `RequestQueue`를 쉽게 설정할 수 있는 `Volley.newRequestQueue`에 대해 알아보았습니다. 이번에는 사용자정의 속성을 지원하는 `RequestQueue`를 만드는 단계에 대해 설명합니다.
+[[이전 강좌|간단한-요청-보내기]]에서는 volley의 기본동작을 활용하는 `RequestQueue`를 쉽게 설정할 수 있는 `Volley.newRequestQueue`에 대해 알아보았습니다. 이번에는 사용자정의 속성을 지원하는 `RequestQueue`를 만드는 단계에 대해 설명합니다.
 
 또한, 앱의 라이프타임동안 유지되는 `RequestQueue`를 만들기 위해 싱글톤을 사용하는 방법도 연습해보겠습니다.
 
