@@ -62,7 +62,7 @@ mRequestQueue.add(stringRequest);
 
 다음은 `ImageLoader` 기능과 `RequestQueue`를 제공하는 싱글톤 클래스의 예입니다:
 
-```
+```java
 public class MySingleton {
     private static MySingleton mInstance;
     private RequestQueue mRequestQueue;
