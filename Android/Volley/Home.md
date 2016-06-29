@@ -38,8 +38,7 @@ git clone https://android.googlesource.com/platform/frameworks/volley
 
 ## Lessons
 
-[[간단한 요청 보내기]]
-
+* [[간단한 요청 보내기]]<br>
 Volley의 기본 동작을 사용하여 간단한 요청을 보내는 방법과 요청을 취소하는 방법에 대해 알아 봅니다.
 
 * [[RequestQueue 설정하기]]<br>
