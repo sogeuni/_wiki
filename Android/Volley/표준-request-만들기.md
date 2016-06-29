@@ -93,11 +93,11 @@ mImageLoader = MySingleton.getInstance(this).getImageLoader();
 mNetworkImageView.setImageUrl(IMAGE_URL, mImageLoader);
 ```
 
-위의 코드는 [[RequestQueue-설정하기#싱글톤-singleton-패턴-사용하기|RequestQueue 설정하기]]에서 설명한 싱글톤 클래스를 통해 `RequestQueue`와 `ImageLoader`에 접근합니다. 따라서, 앱이 실행되는 동안 하나의 인스턴스만 생성됩니다. `ImageLoader`의 비트맵 캐시는 activity 외부에 생성됩니다. 만약 activity에 `ImageLoader`가 생성되면 activity가 재생성될때 마다 `ImageLoader`도 새로 생성되어 플리커링이 발생할 수 있습니다.
+위의 코드는 [[RequestQueue 설정하기|RequestQueue-설정하기#싱글톤-singleton-패턴-사용하기]]에서 설명한 싱글톤 클래스를 통해 `RequestQueue`와 `ImageLoader`에 접근합니다. 따라서, 앱이 실행되는 동안 하나의 인스턴스만 생성됩니다. `ImageLoader`의 비트맵 캐시는 activity 외부에 생성됩니다. 만약 activity에 `ImageLoader`가 생성되면 activity가 재생성될때 마다 `ImageLoader`도 새로 생성되어 플리커링이 발생할 수 있습니다.
 
 #### LRU 캐시 예제
 
-Volley toolbox는 `DiskBasedCache` 클래스를 통해 캐시를 구현합니다. 이 클래스는 하드디스크의 특정 디렉토리에 파일로 캐시를 저장합니다. 하지만 `ImageLoader`를 사용하려면 `ImageLoader.ImageCache` 인터페이스를 구현하여 메모리 LRU 캐시를 제공해야 합니다. 캐시를 싱글톤으로 구현하고자 한다면 [[RequestQueue-설정하기#싱글톤-singleton-패턴-사용하기|RequestQueue 설정하기]]를 참고하세요.
+Volley toolbox는 `DiskBasedCache` 클래스를 통해 캐시를 구현합니다. 이 클래스는 하드디스크의 특정 디렉토리에 파일로 캐시를 저장합니다. 하지만 `ImageLoader`를 사용하려면 `ImageLoader.ImageCache` 인터페이스를 구현하여 메모리 LRU 캐시를 제공해야 합니다. 캐시를 싱글톤으로 구현하고자 한다면 [[RequestQueue 설정하기|RequestQueue-설정하기#싱글톤-singleton-패턴-사용하기]]를 참고하세요.
 
 다음은 `LruBitmapCache`를 구현하는 예제입니다. [LruCache](https://developer.android.com/reference/android/support/v4/util/LruCache.html) 클래스를 상속받고 `ImageLoader.ImageCache` 인터페이스를 구현합니다.
 
