@@ -42,14 +42,11 @@ git clone https://android.googlesource.com/platform/frameworks/volley
 
 Volley의 기본 동작을 사용하여 간단한 요청을 보내는 방법과 요청을 취소하는 방법에 대해 알아 봅니다.
 
-[[RequestQueue 설정하기]]
+* [[RequestQueue 설정하기]]<br>
+ **RequestQueue**를 설정하는 방법과 앱이 종료될 때 까지 유지되는 **RequestQueue**를 만들기 위해서 싱글턴 패턴을 구현하는 방법에 대해 알아 봅니다.
 
-**RequestQueue**를 설정하는 방법과 앱이 종료될 때 까지 유지되는 **RequestQueue**를 만들기 위해서 싱글턴 패턴을 구현하는 방법에 대해 알아 봅니다.
+* [[표준 request 만들기]]<br>
+ Volley에서 기본적으로 제공하는 타입(raw string, image, JSON)을 사용하여 요청을 보내는 방법에 대해 알아 봅니다.
 
-[[표준-request-만들기]]
-
-Volley에서 기본적으로 제공하는 타입(raw string, image, JSON)을 사용하여 요청을 보내는 방법에 대해 알아 봅니다.
-
-[[사용자 정의 요청 구현하기]]
-
-사용자 정의 요청을 구현하는 방법에 대해 알아 봅니다.
+* [[커스텀 request 구현하기]]<br>
+ 사용자 정의 요청을 구현하는 방법에 대해 알아 봅니다.
