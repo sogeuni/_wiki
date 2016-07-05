@@ -110,4 +110,4 @@ public class GsonRequest<T> extends Request<T> {
 }
 ```
 
-Volley는 즉시 사용 가능한 `JsonArrayRequest`와 `JsonArrayObject` 클래스를 제공합니다. [표준 request 만들기]를 참고하세요.
+Volley는 즉시 사용 가능한 `JsonArrayRequest`와 `JsonArrayObject` 클래스를 제공합니다. [[표준 request 만들기]]를 참고하세요.
