@@ -1,9 +1,1 @@
-Aaaa
-
-<<AllPages()>>
-
-<<GlobalTOC(a)>>
-
-Some long sentence. [^footnote]
-
-[^footnote]: Test, [Link](https://google.com).aaa
+<<GlobalTOC(전체글)>>
